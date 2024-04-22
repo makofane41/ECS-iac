@@ -1,0 +1,11 @@
+1. login
+aws ecr get-login-password --region af-south-1 | docker login --username AWS --password-stdin 415742235044.dkr.ecr.af-south-1.amazonaws.com
+
+2. build
+docker build -t dokotella_backend .
+
+3. tag
+docker tag dokotella_backend:latest 415742235044.dkr.ecr.af-south-1.amazonaws.com/dokotella_backend:latest
+
+4. push
+docker push 415742235044.dkr.ecr.af-south-1.amazonaws.com/dokotella_backend:latest
